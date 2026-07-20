@@ -1,0 +1,38 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.dremio.com/dremio-cloud/security/authentication/
+docs: https://docs.dremio.com/dremio-cloud/security/authentication/
+summary:
+  types: [http, oauth2, apiKey]
+  api_key_in: [header]
+  oauth2_flows: [tokenExchange]
+  transport: Authorization Bearer header on every REST request
+schemes:
+- name: PersonalAccessToken
+  type: apiKey
+  in: header
+  parameter: Authorization
+  format: "Bearer <PAT>"
+  description: >-
+    Personal Access Token minted per user or service user; sent as a bearer token.
+    The primary credential for scripts, the CLI, and the MCP server.
+- name: OAuthAccessToken
+  type: oauth2
+  flow: tokenExchange
+  description: >-
+    OAuth access token obtained by exchanging a PAT at login.dremio.cloud;
+    Dremio recommends exchanging the PAT for an OAuth access token before
+    production use.
+- name: ExternalJWT
+  type: openIdConnect
+  description: >-
+    External JWT exchange lets an external IdP-issued token be exchanged for a
+    Dremio token for federated / SSO connection types.
+- name: SSO
+  type: sso
+  description: >-
+    Console/web sign-in via SSO or username/password; third-party identity
+    providers (Google, GitHub, IdP) are supported for account login.
+notes:
+  - No OpenAPI is captured for this stub, so schemes are searched from the docs
+    auth page rather than derived from securitySchemes.
