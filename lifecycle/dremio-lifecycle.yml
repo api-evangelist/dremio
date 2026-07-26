@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  https://docs.dremio.com/dremio-cloud/api/ ,
+  https://docs.dremio.com/current/release-notes/ ,
+  https://status.dremio.com/
+versioning:
+  scheme: uri-path
+  cloud_current: v0
+  enterprise_current: 26.x
+  docs: https://docs.dremio.com/current/release-notes/
+deprecation:
+  policy_url: https://docs.dremio.com/current/release-notes/
+  sunset_header: false
+  notes: >-
+    Deprecations are announced in the versioned Enterprise release notes and the
+    Cloud changelog; no RFC 8594 Sunset/Deprecation HTTP header contract is documented.
+status_page: https://status.dremio.com/
+changelog: https://docs.dremio.com/dremio-cloud/changelog/
+sla:
+  url: https://www.dremio.com/legal/terms-of-service/
+  uptime_target: null
+deprecated_operations: []

@@ -1,0 +1,58 @@
+generated: '2026-07-18'
+method: searched
+source: PyPI, Maven Central, and Dremio docs/drivers pages
+packages:
+- language: python
+  registry: pypi
+  name: dremio-cli
+  url: https://pypi.org/project/dremio-cli/
+  install: pipx install dremio-cli
+  version: 2.1.2
+  official: true
+  notes: Official Dremio Cloud developer CLI (author "Dremio Corporation"; repo github.com/dremio/cli).
+- language: python
+  registry: pypi
+  name: dbt-dremio
+  url: https://pypi.org/project/dbt-dremio/
+  install: pip install dbt-dremio
+  version: 1.10.1
+  official: true
+  notes: Official Dremio adapter plugin for dbt (repo github.com/dremio/dbt-dremio).
+- language: java
+  registry: maven
+  name: com.dremio.distribution:dremio-jdbc-driver
+  url: https://mvnrepository.com/artifact/com.dremio.distribution/dremio-jdbc-driver
+  install: "com.dremio.distribution:dremio-jdbc-driver"
+  official: true
+  notes: Dremio legacy JDBC driver distributed on Maven under the com.dremio.distribution group.
+- language: java
+  registry: maven
+  name: org.apache.arrow:flight-sql-jdbc-driver
+  url: https://mvnrepository.com/artifact/org.apache.arrow/flight-sql-jdbc-driver
+  install: "org.apache.arrow:flight-sql-jdbc-driver"
+  official: false
+  notes: >-
+    Apache Arrow Flight SQL JDBC driver — the recommended universal driver for Dremio
+    (open source, maintained by the Apache Arrow project, documented by Dremio at
+    dremio.com/drivers/jdbc). Not published by Dremio itself.
+- language: python
+  registry: pypi
+  name: pydremio
+  url: https://pypi.org/project/pydremio/
+  install: pip install pydremio
+  official: false
+  notes: Community Python wrapper over the Dremio HTTP API and Arrow Flight.
+- language: python
+  registry: pypi
+  name: dremio-simple-query
+  url: https://pypi.org/project/dremio-simple-query/
+  install: pip install dremio-simple-query
+  official: false
+  notes: Community helper for querying Dremio via Arrow Flight.
+- language: python
+  registry: pypi
+  name: dremio-client
+  url: https://pypi.org/project/dremio-client/
+  install: pip install dremio-client
+  official: false
+  notes: Community client with REST plus experimental Arrow Flight/ODBC support.

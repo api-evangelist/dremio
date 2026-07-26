@@ -1,0 +1,38 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.dremio.com/dremio-cloud/api/
+docs: https://docs.dremio.com/dremio-cloud/api/
+authentication:
+  style: Bearer token (Personal Access Token or exchanged OAuth access token)
+  header: "Authorization: Bearer <TOKEN>"
+  ref: authentication/dremio-authentication.yml
+versioning:
+  scheme: uri-path
+  current: v0
+  base_url: https://api.dremio.cloud/v0/
+  notes: Cloud REST paths are under /v0/; self-managed Enterprise versions the product (24.x/25.x/26.x).
+pagination:
+  style: token
+  request_params: [maxResults, pageToken]
+  response_fields: [nextPageToken]
+  notes: >-
+    Catalog and job-listing endpoints page via a nextPageToken cursor returned in
+    the response and passed back on the next request; SQL query results are paged
+    via the job results endpoint (offset/limit) or streamed over Arrow Flight.
+data_formats:
+  request: application/json
+  response: application/json
+  bulk_transport: Apache Arrow Flight SQL (gRPC) for high-throughput result streaming
+error_envelope:
+  content_type: application/json
+  shape: JSON body with errorMessage / moreInfo fields on non-2xx responses
+  ref: errors
+idempotency:
+  supported: false
+  notes: >-
+    Dremio's REST API does not document an idempotency-key header. Catalog object
+    creation is keyed by path/name (natural idempotency on re-create conflicts,
+    409), but there is no client-supplied idempotency token contract.
+rate_limiting:
+  documented: false
+  notes: No published numeric REST rate-limit headers; compute is metered by DCU consumption, not request-count quotas.

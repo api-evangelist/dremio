@@ -1,0 +1,49 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  https://docs.dremio.com/dremio-cloud/api/ ,
+  https://docs.dremio.com/dremio-cloud/security/compliance ,
+  https://docs.dremio.com/current/client-applications/drivers/arrow-flight-sql-jdbc-driver/
+standards:
+- id: oauth2
+  conforms: true
+  evidence: Docs document OAuth access tokens exchanged from PATs at login.dremio.cloud.
+- id: bearer-token-rfc6750
+  conforms: true
+  evidence: "REST requests authenticate with Authorization: Bearer <token>."
+- id: iceberg-rest-catalog
+  conforms: true
+  evidence: Catalog API also supports the Apache Iceberg REST Catalog API (docs.dremio.com/dremio-cloud/api/catalog/).
+- id: apache-polaris-open-catalog
+  conforms: true
+  evidence: Open Catalog is powered by Apache Polaris (incubating).
+- id: arrow-flight-sql
+  conforms: true
+  evidence: Dremio exposes an Apache Arrow Flight SQL endpoint plus Arrow Flight SQL JDBC/ODBC drivers.
+- id: ansi-sql-information-schema
+  conforms: true
+  evidence: Docs expose ANSI-standard INFORMATION_SCHEMA views (tables, columns, schemata, views).
+- id: jdbc
+  conforms: true
+  evidence: Arrow Flight SQL JDBC and legacy Dremio JDBC drivers are published.
+- id: odbc
+  conforms: true
+  evidence: Arrow Flight SQL ODBC driver is published and documented.
+- id: soc2-type2
+  conforms: true
+  evidence: Compliance docs list SOC 2 Type II; report available on request.
+- id: iso-27001-2022
+  conforms: true
+  evidence: ISMS conforms to ISO/IEC 27001:2022; certificate available on request.
+- id: hipaa
+  conforms: true
+  evidence: Dremio press release announces HIPAA certification.
+- id: gdpr
+  conforms: true
+  evidence: Compliance posture supports GDPR.
+- id: ccpa-cpra
+  conforms: true
+  evidence: Compliance posture supports CCPA/CPRA.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Error responses are plain JSON (errorMessage/moreInfo), not application/problem+json.

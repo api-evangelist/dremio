@@ -1,0 +1,45 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.dremio.com/dremio-cloud/ai-integration/cli/
+name: Dremio Developer CLI
+binary: dremio
+package: dremio-cli
+official: true
+version: 2.1.2
+repo: https://github.com/dremio/cli
+runtime: Python 3.11+
+description: >-
+  Wraps the Dremio Cloud REST API into a consistent set of terminal commands for
+  queries, catalog management, Reflections, engines, users, roles, grants, and
+  projects — for interactive use or automation pipelines.
+install:
+- method: pipx
+  command: pipx install dremio-cli
+  recommended: true
+- method: uv
+  command: uv tool install dremio-cli
+- method: pip
+  command: pip install dremio-cli
+command_groups:
+- name: setup
+  description: Interactive credential configuration.
+- name: chat
+  description: AI agent conversations.
+- name: query
+  description: SQL execution and job management.
+- name: schema
+  description: Table inspection, lineage, and catalog search.
+- name: metadata
+  description: Wiki and tag management.
+- name: jobs
+  description: Job listing and profiling.
+- name: reflections
+  description: Materialized-view (Reflection) administration.
+- name: engines
+  description: Compute engine (resource) management.
+- name: users
+  description: User, role, and grant administration.
+- name: projects
+  description: Project lifecycle management.
+- name: introspection
+  description: Command-schema inspection.

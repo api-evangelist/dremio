@@ -1,0 +1,42 @@
+generated: '2026-07-18'
+method: searched
+status: published
+source: https://github.com/dremio/dremio-mcp
+docs: https://docs.dremio.com/dremio-cloud/ai-integration/mcp-server/
+server:
+  name: dremio-mcp-server
+  repo: https://github.com/dremio/dremio-mcp
+  license: Apache-2.0
+  language: python
+  runtime: Python 3.11+
+  transport: [stdio, streamable-http]
+  hosted_url: null
+  install: uv run dremio-mcp-server config create dremioai --uri <dremio_uri> --pat <token>
+  auth: Dremio Personal Access Token (PAT) + Dremio URI
+  modes:
+  - FOR_DATA_PATTERNS
+  - FOR_SELF
+  - FOR_PROMETHEUS
+tools:
+- name: RunSqlQuery
+  description: Executes SELECT queries on the Dremio cluster.
+- name: GetSchemaOfTable
+  description: Retrieves schema information for tables.
+- name: GetTableOrViewLineage
+  description: Finds lineage of tables/views.
+- name: SemanticSearch
+  description: Performs semantic search across the cluster.
+- name: GetUsefulSystemTableNames
+  description: Lists important system tables.
+- name: GetNameOfJobsRecentTable
+  description: Returns the system table name for recent job information.
+- name: GetFailedJobDetails
+  description: Analyzes failed/canceled jobs over the past 7 days.
+- name: BuildUsageReport
+  description: Generates usage reports grouped by engines or projects.
+- name: GetRelevantMetrics
+  description: Retrieves Prometheus metrics for the Dremio cluster.
+- name: GetMetricSchema
+  description: Returns metric labels and sample values.
+- name: RunPromQL
+  description: Executes Prometheus queries.

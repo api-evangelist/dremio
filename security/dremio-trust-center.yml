@@ -1,0 +1,24 @@
+generated: '2026-07-18'
+method: searched
+probe: true
+source: >-
+  https://docs.dremio.com/dremio-cloud/security/compliance ,
+  https://www.dremio.com/platform/security/ ,
+  https://www.dremio.com/press-releases/dremio-expands-security-compliance-with-hipaa-certification/
+url: https://www.dremio.com/platform/security/
+compliance_docs: https://docs.dremio.com/dremio-cloud/security/compliance
+certifications:
+- SOC 2 Type II
+- ISO/IEC 27001:2022
+- HIPAA
+- GDPR
+- CCPA/CPRA
+notes: >-
+  Dremio has no dedicated trust.dremio.com portal; compliance posture is published on
+  the platform security page and the Dremio Cloud compliance docs. SOC 2 Type II report
+  and ISO/IEC 27001:2022 certificate are made available on request.
+evidence:
+- source: https://docs.dremio.com/dremio-cloud/security/compliance
+  keywords: [soc 2 type ii, data residency]
+- source: https://www.dremio.com/press-releases/dremio-expands-security-compliance-with-hipaa-certification/
+  keywords: [hipaa certification]

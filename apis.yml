@@ -1,8 +1,28 @@
 aid: dremio
 name: Dremio
-description: Dremio is a company surfaced as a portfolio company of lightspeed-venture-partners and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Dremio is a data lakehouse platform for running high-performance SQL queries
+  directly on cloud object storage and data lakes without moving or copying data.
+  It combines an Apache Arrow-based MPP query engine, Autonomous Reflections for
+  acceleration, and an Apache Iceberg / Apache Polaris-powered Open Catalog into a
+  self-service semantic layer for analytics and agentic AI. Dremio is delivered as
+  a fully managed service (Dremio Cloud) and a self-managed deployment (Dremio
+  Enterprise), and exposes a REST API, Apache Arrow Flight SQL, Arrow Flight SQL
+  JDBC/ODBC drivers, a developer CLI, a dbt adapter, and an official Model Context
+  Protocol (MCP) server for connecting AI agents to the lakehouse.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.dremio.com/wp-content/uploads/2023/01/dremio-logo.png
 url: https://raw.githubusercontent.com/api-evangelist/dremio/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,12 +32,110 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-apis: []
+- Data Lakehouse
+- Analytics
+- SQL Query Engine
+- Apache Iceberg
+- Apache Arrow
+- Data Catalog
+- Semantic Layer
+- AI Agents
+- MCP
+apis:
+- name: Dremio Cloud REST API
+  description: >-
+    REST API for Dremio Cloud covering the Open Catalog (sources, folders, tables,
+    views, wikis, tags, lineage), SQL query execution and job management,
+    Reflections, engines, projects, users, roles, grants, and identity/token
+    providers. Authenticated with a Personal Access Token or an exchanged OAuth
+    access token as a bearer token.
+  humanURL: https://docs.dremio.com/dremio-cloud/api/
+  baseURL: https://api.dremio.cloud/v0/
+  tags:
+  - REST
+  - SQL
+  - Catalog
+  - Iceberg
+  properties:
+  - type: APIReference
+    url: https://docs.dremio.com/dremio-cloud/api/
+  - type: Documentation
+    url: https://docs.dremio.com/dremio-cloud/api/catalog/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: DeveloperPortal
+  url: https://docs.dremio.com/
+- type: Documentation
+  url: https://docs.dremio.com/
+- type: APIReference
+  url: https://docs.dremio.com/dremio-cloud/api/
+- type: GettingStarted
+  url: https://docs.dremio.com/dremio-cloud/get-started/quick-tour
+- type: SignUp
+  url: https://www.dremio.com/get-started
+- type: Pricing
+  url: https://www.dremio.com/pricing/
+- type: TermsOfService
+  url: https://www.dremio.com/legal/terms-of-service/
+- type: PrivacyPolicy
+  url: https://www.dremio.com/legal/privacy-policy/
+- type: Blog
+  url: https://www.dremio.com/blog/
+- type: Support
+  url: https://community.dremio.com/
+- type: GitHubOrganization
+  url: https://github.com/dremio
+- type: StatusPage
+  url: https://status.dremio.com/
+- type: Deprecation
+  url: https://docs.dremio.com/current/release-notes/
+- type: ChangeLog
+  url: https://docs.dremio.com/dremio-cloud/changelog/
+- type: Compliance
+  url: https://docs.dremio.com/dremio-cloud/security/compliance
+- type: MCPServer
+  name: Dremio MCP Server
+  url: mcp/dremio-mcp.yml
+- type: Packages
+  url: packages/dremio-packages.yml
+- type: SDKs
+  url: packages/dremio-packages.yml
+- type: CLI
+  url: cli/dremio-cli.yml
+- type: LLMsTxt
+  url: llms/dremio-llms.txt
+- type: WellKnown
+  url: well-known/dremio-well-known.yml
+- type: SecurityTxt
+  url: well-known/dremio-security.txt
+- type: Authentication
+  url: authentication/dremio-authentication.yml
+- type: Conventions
+  url: conventions/dremio-conventions.yml
+- type: Conformance
+  url: conformance/dremio-conformance.yml
+- type: VulnerabilityDisclosure
+  url: security/dremio-vulnerability-disclosure.yml
+- type: Security
+  url: https://www.dremio.com/platform/security/responsible-disclosure-limitations/
+- type: TrustCenter
+  url: security/dremio-trust-center.yml
+- type: DomainSecurity
+  url: security/dremio-domain-security.yml
+- type: Lifecycle
+  url: lifecycle/dremio-lifecycle.yml
+- type: ChangeLog
+  name: Dremio Cloud Changelog (artifact)
+  url: changelog/dremio-changelog.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

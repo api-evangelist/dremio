@@ -1,0 +1,28 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.dremio.com/dremio-cloud/changelog/
+scheme: date-based (YYYY-MM-DD, no semver); Dremio Enterprise ships semver release notes (26.x/25.x)
+current: rolling (Dremio Cloud); Dremio Enterprise 26.x
+enterprise_release_notes: https://docs.dremio.com/current/release-notes/
+entries:
+- date: '2026-07-14'
+  breaking: false
+  highlights: AI agent enhancements (engine listing/metrics), chat card UI collapse/expand, bug fixes across query execution, Reflections, and visualization.
+- date: '2026-07-07'
+  breaking: false
+  highlights: Amazon Redshift JDBC driver CVE-2026-8178 fix, Iceberg reflection data-quality improvement, engine autoscaling fix.
+- date: '2026-06-29'
+  breaking: false
+  highlights: Privacy enhancement removing third-party cookie tracking; URL parameter security restriction.
+- date: '2026-06-23'
+  breaking: false
+  highlights: Arrow Flight result streaming fixes (IndexOutOfBoundsException, PyArrow RST_STREAM failures).
+- date: '2026-06-16'
+  breaking: false
+  highlights: Autonomous Reflections adopt underlying dataset refresh policies; AI agent connection recovery and context panel improvements.
+- date: '2026-06-11'
+  breaking: false
+  highlights: Dremio Cloud now supports deploying in the AWS US East (Ohio) region.
+- date: '2026-06-05'
+  breaking: false
+  highlights: Private connectivity for Amazon Redshift and Snowflake via AWS PrivateLink.
