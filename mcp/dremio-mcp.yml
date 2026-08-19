@@ -9,7 +9,9 @@ server:
   license: Apache-2.0
   language: python
   runtime: Python 3.11+
-  transport: [stdio, streamable-http]
+  transport:
+  - stdio
+  - streamable-http
   hosted_url: null
   install: uv run dremio-mcp-server config create dremioai --uri <dremio_uri> --pat <token>
   auth: Dremio Personal Access Token (PAT) + Dremio URI
@@ -40,3 +42,9 @@ tools:
   description: Returns metric labels and sample values.
 - name: RunPromQL
   description: Executes Prometheus queries.
+deployment:
+  mode: local-stdio
+  verified: searched
+  tools: 11
+  checked: '2026-08-12'
+  source: catalog MCP census
