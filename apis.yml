@@ -10,6 +10,17 @@ description: >-
   Enterprise), and exposes a REST API, Apache Arrow Flight SQL, Arrow Flight SQL
   JDBC/ODBC drivers, a developer CLI, a dbt adapter, and an official Model Context
   Protocol (MCP) server for connecting AI agents to the lakehouse.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
