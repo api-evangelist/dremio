@@ -81,6 +81,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Website
+  url: https://www.dremio.com/
 - type: DeveloperPortal
   url: https://docs.dremio.com/
 - type: Documentation
