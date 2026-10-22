@@ -47,11 +47,52 @@ edges:
   detected: '2026-10-19'
   detected_by: mirror-platform-listings.py
   category: connector
+- partner_name: CVE Program (CVE Numbering Authorities)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.cve.org/PartnerInformation/ListofPartners/partner/Dremio
+  category: Vulnerability disclosure (CVE Numbering Authority)
+  contract_reference:
+    register: CVE Program CNA list (github.com/CVEProject/cve-website CNAsList.json @ 239d3d9b68e0)
+    standard: CVE Program CNA Operational Rules (CVE Numbering Authority)
+    spec_file: null
+    role: cve-numbering-authority
+    registered_name: Dremio Corporation
+    matched_domain: dremio.com
+    matched_by: domain+name-among-holders
+    cna_id: CNA-2024-0024
+    cna_short_name: Dremio
+    cna_types:
+    - Vendor
+    - Open Source
+    cna_roles:
+    - CNA
+    scope: All Dremio Corporation products.
+    top_level_root: MITRE Corporation
+    root: n/a
+    security_advisories:
+    - https://docs.dremio.com/current/reference/bulletins/
+    disclosure_policy:
+    - https://www.dremio.com/platform/security/responsible-disclosure-limitations/
+    country: USA
+    signal_note: listing as a CVE Numbering Authority = participation (a public commitment to assign CVE IDs and
+      publish advisories for its scope); never a count of CVEs
+    detected_by: sweep-vulnerability-disclosure-cna.py
+    detected: '2026-10-22'
+  detected_by: sweep-vulnerability-disclosure-cna.py
+  first_seen: '2026-10-22'
 method: searched
 checked:
 - https://connectors.airbyte.com/files/registries/v0/cloud_registry.json
 - https://connectors.airbyte.com/files/registries/v0/oss_registry.json
 - tableau/integrations/tableau-integration-edges.yml
+- https://api.first.org/data/v1/teams
+- https://raw.githubusercontent.com/CVEProject/cve-website/dev/src/assets/data/CNAsList.json
+- https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json
 source:
 - https://connectors.airbyte.com/files/registries/v0/cloud_registry.json
 - https://connectors.airbyte.com/files/registries/v0/oss_registry.json
